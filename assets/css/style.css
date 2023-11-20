@@ -7,11 +7,7 @@
 :root {}
 
 html {
-    font-family: 'gg sans', sans-serif;
-    font-family: 'gg sans Normal', sans-serif;
-    font-family: 'gg sans Medium', sans-serif;
-    font-family: 'gg sans SemiBold', sans-serif;
-
+    font-family: 'Noto Sans', sans-serif;
 }
 
 img {
@@ -116,7 +112,8 @@ nav>a:hover {
     row-gap: 20px;
 }
 
-#cta-buttons button {
+#cta-buttons button,
+.discord-zoom button {
     font-size: 20px;
     padding: 16px 32px;
     border: 1px solid;
@@ -138,12 +135,7 @@ nav>a {
 
 section {
     border: 1px dashed black;
-    padding-block: 20px;
-    /* background-color: black; */
-}
-
-section figure {
-    background-color: lightgoldenrodyellow;
+    padding-block: 100px;
 }
 
 section .img-text {
@@ -155,8 +147,8 @@ section .img-text figure {
     flex-basis: 70%;
 }
 
-section .section-text {
-    background-color: lightgreen;
+section .section-text h2 {
+    margin-bottom: 30px;
 }
 
 section .img-text .section-text {
@@ -168,16 +160,50 @@ section .img-text .section-text {
     line-height: 57.6px;
 }
 
+section.discord-services:nth-child(odd) {}
+
 section.discord-services:nth-child(even) {
-    background-color: lightgray;
+    background-color: #F6F6F6;
+    padding-bottom: 0;
+}
+
+section.discord-services:nth-child(even) .img-text {
+    margin-bottom: 50px;
 }
 
 section.discord-services:nth-child(even) .img-text figure {
     order: 1;
 }
 
-section.discord-services:last-child {
+.discord-zoom {
     text-align: center;
+}
+
+.discord-zoom h2 {
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.discord-zoom h3 {
+    font-size: 32px;
+    background-image: url(../img/stars.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 15px;
+}
+
+.discord-zoom button {
+    color: white;
+    background-color: #5865f2;
+    border-color: #5865f2;
+}
+
+.discord-zoom button:hover {
+    background-color: #7983F5;
+    border-color: #7983F5;
+    box-shadow: 0px 5px 17px rgba(0, 0, 0, 0.70);
 }
 
 footer {
