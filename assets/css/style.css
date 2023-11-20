@@ -10,7 +10,8 @@ html {
     font-family: 'Noto Sans', sans-serif;
 }
 
-img {
+img,
+svg {
     width: 100%;
     display: block;
 }
@@ -134,8 +135,7 @@ nav>a {
 }
 
 section {
-    border: 1px dashed black;
-    padding-block: 100px;
+    padding-top: 100px;
 }
 
 section .img-text {
@@ -160,15 +160,12 @@ section .img-text .section-text {
     line-height: 57.6px;
 }
 
-section.discord-services:nth-child(odd) {}
-
 section.discord-services:nth-child(even) {
     background-color: #F6F6F6;
-    padding-bottom: 0;
 }
 
-section.discord-services:nth-child(even) .img-text {
-    margin-bottom: 50px;
+section.discord-services .img-text {
+    margin-bottom: 100px;
 }
 
 section.discord-services:nth-child(even) .img-text figure {
