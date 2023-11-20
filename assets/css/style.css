@@ -4,18 +4,24 @@
     box-sizing: border-box;
 }
 
+:root {}
+
 html {
     font-family: 'gg sans', sans-serif;
     font-family: 'gg sans Normal', sans-serif;
     font-family: 'gg sans Medium', sans-serif;
     font-family: 'gg sans SemiBold', sans-serif;
+
 }
 
-header nav figure,
-header nav ul,
-header nav a {
-    /* background-color: lightgoldenrodyellow; */
-    border: 1px dashed black;
+img {
+    width: 100%;
+    display: block;
+}
+
+.content {
+    width: 80%;
+    margin: 0 auto;
 }
 
 a {
@@ -23,19 +29,38 @@ a {
     text-transform: capitalize;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    font-size: 20px;
+    line-height: 32.5px;
+}
+
+header nav figure,
+header nav ul,
+header nav a {
+    border: 1px dashed black;
+}
+
 header {
     background-color: lightcyan;
     padding-bottom: 50px;
+    background-image: url(../img/jumbo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header nav {
-    background-color: lightcoral;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
     padding-block: 5px;
-    margin: 0 auto;
+}
+
+header nav figure a {
+    display: block;
 }
 
 header nav ul {
@@ -47,24 +72,68 @@ header nav ul li {
     list-style-type: none;
 }
 
-header nav figure a {
-    display: block;
+header nav ul li a {
+    color: white;
 }
 
-header nav figure a img {
-    vertical-align: middle;
+nav>a {
+    color: black;
+    font-size: 14px;
+    padding: 7px 16px;
+    border-radius: 30px;
+}
+
+nav>a:hover {
+    color: #5865F2;
+    text-decoration: none;
+    box-shadow: 0px 5px 17px rgba(0, 0, 0, 0.70);
 }
 
 #cta {
-    background-color: lightpink;
     width: 60%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
     margin: 50px auto 0 auto;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
+#cta h1 {
+    color: white;
+    font-size: 56px;
+}
+
+#cta p {
+    color: white;
+    text-align: center;
+}
+
+#cta-buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    row-gap: 20px;
+}
+
+#cta-buttons button {
+    font-size: 20px;
+    padding: 16px 32px;
+    border: 1px solid;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+#cta-buttons button:first-child,
+nav>a {
+    background-color: white;
+    border-color: white;
+}
+
+#cta-buttons button:nth-child(2) {
+    color: white;
+    background-color: #23272A;
+    border-color: #23272A;
 }
 
 section {
@@ -77,20 +146,26 @@ section figure {
     background-color: lightgoldenrodyellow;
 }
 
-section .section-text {
-    background-color: lightgreen;
-}
-
 section .img-text {
     display: flex;
+    gap: 5%;
 }
 
 section .img-text figure {
     flex-basis: 70%;
 }
 
+section .section-text {
+    background-color: lightgreen;
+}
+
 section .img-text .section-text {
     flex-basis: 30%;
+}
+
+.section-text h2 {
+    font-size: 48px;
+    line-height: 57.6px;
 }
 
 section.discord-services:nth-child(even) {
@@ -104,7 +179,6 @@ section.discord-services:nth-child(even) .img-text figure {
 section.discord-services:last-child {
     text-align: center;
 }
-
 
 footer {
     background-color: #121212;
