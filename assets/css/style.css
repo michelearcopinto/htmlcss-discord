@@ -181,7 +181,7 @@ section.discord-services:nth-child(even) .img-text figure {
     order: 1;
 }
 
-main figure {
+main>figure {
     fill: #F6F6F6;
 }
 
@@ -294,8 +294,4 @@ footer nav div:first-child ul li {
     display: flex;
     justify-content: space-between;
     padding-block: 40px 60px;
-}
-
-.footer-login>a:hover {
-    text-decoration: none;
 }
