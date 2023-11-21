@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-:root {}
-
 html {
     font-family: 'Noto Sans', sans-serif;
 }
@@ -23,6 +21,7 @@ svg {
 
 a {
     text-decoration: none;
+    color: white;
     text-transform: capitalize;
 }
 
@@ -40,6 +39,7 @@ header {
     background-image: url(../img/jumbo.png);
     background-size: cover;
     background-repeat: no-repeat;
+    text-shadow: 1px 3px 9px rgba(0, 0, 0, 0.70);
 }
 
 header nav {
@@ -58,56 +58,70 @@ header nav ul {
     gap: 35px;
 }
 
-header nav ul li,
-footer ul li {
+li {
     list-style-type: none;
 }
 
-header nav ul li a,
-footer ul li a {
-    color: white;
+button.boxshadow:hover,
+a.boxshadow:hover {
+    box-shadow: 0px 5px 17px rgba(0, 0, 0, 0.70);
+    cursor: pointer;
+    text-decoration: none;
 }
 
-nav>a {
-    color: black;
+.small-button {
     font-size: 14px;
+    font-weight: 500;
     padding: 7px 16px;
     border-radius: 30px;
 }
 
-nav>a:hover,
-#cta-buttons>button:first-child:hover {
-    color: #5865F2;
-    text-decoration: none;
-
+.big-button {
+    font-size: 20px;
+    padding: 16px 32px;
+    border: 1px solid;
+    border-radius: 30px;
+    font-weight: 600;
 }
 
-.discord-zoom button:hover {
+.white-button {
+    background-color: white;
+    border-color: white;
+}
+
+.white-button:hover {
+    color: #5865F2;
+}
+
+header a.white-button {
+    color: black;
+    text-shadow: none;
+}
+
+.purple-button {
+    color: white;
+    background-color: #5865f2;
+    border-color: #5865f2;
+}
+
+.purple-button:hover {
     background-color: #7983F5;
     border-color: #7983F5;
 }
 
-button.boxshadow:hover {
-    box-shadow: 0px 5px 17px rgba(0, 0, 0, 0.70);
-}
-
 #cta {
-    width: 60%;
+    width: 55%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
     margin: 50px auto 0 auto;
+    color: white;
+    text-align: center;
 }
 
 #cta h1 {
-    color: white;
     font-size: 56px;
-}
-
-#cta p {
-    color: white;
-    text-align: center;
 }
 
 #cta-buttons {
@@ -118,59 +132,43 @@ button.boxshadow:hover {
     row-gap: 20px;
 }
 
-#cta-buttons button,
-.discord-zoom button {
-    font-size: 20px;
-    padding: 16px 32px;
-    border: 1px solid;
-    border-radius: 30px;
-    font-weight: 600;
-}
-
-#cta-buttons button:first-child,
-nav>a {
-    background-color: white;
-    border-color: white;
-}
-
 #cta-buttons button:nth-child(2) {
     color: white;
     background-color: #23272A;
     border-color: #23272A;
 }
 
+#cta-buttons button:nth-child(2):hover {
+    background-color: #313338;
+    border-color: #313338;
+}
+
 section {
     padding-top: 100px;
 }
 
-section .img-text {
+.img-text {
     display: flex;
     gap: 5%;
+    margin-bottom: 160px;
 }
 
-section .img-text figure {
+.img-text figure {
     flex-basis: 70%;
 }
 
-section .section-text h2 {
-    margin-bottom: 30px;
-}
-
-section .img-text .section-text {
+.section-text {
     flex-basis: 30%;
 }
 
 .section-text h2 {
     font-size: 48px;
     line-height: 57.6px;
+    margin-bottom: 30px;
 }
 
 section.discord-services:nth-child(even) {
     background-color: #F6F6F6;
-}
-
-section.discord-services .img-text {
-    margin-bottom: 160px;
 }
 
 section.discord-services:nth-child(even) .img-text figure {
@@ -198,50 +196,69 @@ section.discord-services:nth-child(even) .img-text figure {
 
 .discord-zoom button {
     margin-block: 50px 120px;
-    color: white;
-    background-color: #5865f2;
-    border-color: #5865f2;
 }
 
 footer {
     background-color: #23272A;
-    color: white;
 }
 
-footer .content {
+footer nav {
     display: flex;
-    padding-block: 70px;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    padding-block: 80px 40px;
+    border-bottom: solid 2px #4a5882;
 }
 
-footer .content li {
+footer nav li {
     line-height: 40px;
 }
 
-footer .content>div {
-    flex-grow: 1;
+footer nav>div:first-child {
+    flex-grow: 1.5;
+    color: white;
 }
 
-footer .content>div:first-child {
-    flex-grow: 2;
+footer nav>div {
+    flex-grow: 1;
 }
 
 footer h4 {
     color: #778FE5;
     text-transform: capitalize;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
-#footer-title,
-.content div:nth-child(3) ul li:nth-child(2) a {
+footer nav div:first-child h4:first-child {
+    font-size: 30px;
+}
+
+footer nav div:first-child h4,
+nav div:nth-child(3) ul li:nth-child(2) a {
     text-transform: none;
 }
 
-.content div figure {
+nav div figure {
     display: inline-block;
     width: 18px;
 }
 
-.content footer .footer-login {
+footer nav div:first-child ul {
+    display: flex;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+footer nav div:first-child ul li {
+    font-size: 25px;
+}
+
+.footer-login {
     display: flex;
     justify-content: space-between;
+    padding-block: 40px 60px;
+}
+
+.footer-login>a:hover {
+    text-decoration: none;
 }
