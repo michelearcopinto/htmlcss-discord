@@ -172,12 +172,21 @@ section.discord-services:nth-of-type(even) {
     background-color: #F6F6F6;
 }
 
+section.discord-services:nth-of-type(even) .img-text {
+    margin-bottom: 0;
+}
+
+
 section.discord-services:nth-child(even) .img-text figure {
     order: 1;
 }
 
-section .wave-1hkxOo:nth-child(odd) {
-    fill: red;
+main figure {
+    fill: #F6F6F6;
+}
+
+main figure:nth-of-type(even) {
+    transform: rotate(180deg);
 }
 
 .discord-zoom {
